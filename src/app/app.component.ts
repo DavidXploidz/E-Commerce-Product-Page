@@ -21,7 +21,7 @@ export class AppComponent {
     {
       id:1,
       ruta: "src/../assets/images/image-product-1-thumbnail.jpg",
-      rutaBig: "../assets/images/image-product-1.jpg",
+      rutaBig: "src/../assets/images/image-product-1.jpg",
       nombre: "Producto1",
       estado: true
     },
