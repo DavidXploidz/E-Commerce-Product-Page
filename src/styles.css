@@ -1,1 +1,137 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    /* ## Colors */
+    /* ### Primary */
+    --Orange: hsl(26, 100%, 55%);
+    --PaleOrange: hsl(25, 100%, 94%);
+
+    /* ### Neutral */
+    --VeryDarkBlue: hsl(220, 13%, 13%);
+    --DarkGrayishBlue: hsl(219, 9%, 45%);
+    --GrayishBlue: hsl(220, 14%, 75%);
+    --LightGrayishBlue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black : hsl(0, 0%, 0%); /*(with 75% opacity for lightbox background)*/
+
+    /* Fuentes de google */
+    --fuentePrincipal: 'Kumbh Sans', sans-serif;
+}
+
+/* Estilos para main */
+.info{
+    margin-top: 5rem;
+}
+.info__subtitle{
+    color: var(--Orange);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.info__title{
+    color: var(--VeryDarkBlue);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1;
+}
+.info__p{
+    font-size: 18px;
+    color: var(--DarkGrayishBlue);
+}
+.precio__desc{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--VeryDarkBlue);
+    display: flex;
+    align-items: center;
+}
+.precio__desc::after{
+    content: '50%';
+    font-size: 15px;
+    border-radius: 8px;
+    background-color: hsla(26, 100%, 55%, 0.2);
+    color: var(--Orange);
+    margin-left: 20px;
+    padding: 0 5px;
+}
+.precio__regular{
+    color: var(--GrayishBlue);
+    font-weight: bold;
+    text-decoration: line-through;
+}
+.cantidades{
+    background-color: var(--LightGrayishBlue);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.cantidades__btn{
+    background-color: transparent;
+    border: none;
+}
+.btn-cart{
+    border: none;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 8px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
+    background-color: var(--Orange);
+    color: var(--LightGrayishBlue);
+    font-weight: 700;
+    font-size: 14px;
+    transition: all .25s ease-in;
+}
+.btn-cart:hover{
+    filter: opacity(70%);
+}
+.btn-cart__img{
+    width: 20px;
+    height: 21px;
+    filter: invert(100%)
+}
+.producto{
+    display: grid;
+}
+.producto__div{
+    display: grid;
+}
+.producto__img{
+    max-width: 100%;
+    border-radius: 10px;
+    height: 400px;
+    justify-self: center;
+    display: none;
+}
+.producto__img--activo{
+    display: grid;
+}
+.producto__slider{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    gap: 27px;
+    margin-top: 25px;
+}
+.producto__thumbnail{
+    max-width: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    height: 80px;
+    border: 2px solid transparent;
+}
+.producto__thumbnail:hover{
+    cursor: pointer;
+    filter: opacity(50%);
+    border: 2px solid var(--Orange);
+}
+.producto__thumbnail--activo{
+    border: 2px solid var(--Orange);
+    filter: opacity(30%);
+}

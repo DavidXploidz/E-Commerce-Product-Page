@@ -1,0 +1,50 @@
+<header class="header container border border-start-0 border-end-0 border-top-0">
+   
+    <div class="d-flex align-items-center gap-4">
+        <img class="header__ham" (click)="menuActive = !menuActive" src="/src/../assets/images/icon-menu.svg" alt="Icon ham">
+        <img src="../../assets/images/logo.svg" alt="Image logo sneakers">
+    </div>
+
+    <nav class="header__nav">
+        <a href="/">collections</a>
+        <a href="/">men</a>
+        <a href="/">women</a>
+        <a href="/">about</a>
+        <a href="/">contact</a>
+    </nav>
+
+    <div class="header__perfil">
+        <div class="carrito dropdown">
+            <img class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" src="../../assets/images/icon-cart.svg" alt="icon cart">
+            <p class="carrito__cantidad" *ngIf="CarritoService.producto > 0">{{CarritoService.producto}}</p>
+            <div class="dropdown-menu" style="width: 300px;">
+               <p class="border-bottom fw-bold px-2">Cart</p>
+               <div class="mini-cart" *ngIf="CarritoService.producto">
+                    <img class="mini-cart__img" src="/src/../assets/images/image-product-1-thumbnail.jpg" alt="Product added to cart">
+                    <div>
+                        <h5 class="mini-cart__p">Fall Limited Edition Sneakers</h5>
+                        <p class="mini-cart__p">$125.00 x {{CarritoService.producto}} <strong>${{CarritoService.producto * 125}}</strong></p>
+                    </div>
+                    <img (click)="vaciarCarrito()" src="/src/../assets/images/icon-delete.svg" alt="Eliminar producto">
+               </div>
+               <div class="px-2" *ngIf="CarritoService.producto > 0">
+                   <button class="btn-cart">Checkout</button>
+               </div>
+               <p *ngIf="!CarritoService.producto" class="mini-cart__p text-center">No items yet</p>
+            </div>
+        </div>
+        <img class="header__profile" src="../../assets/images/image-avatar.png" alt="image user profile">
+    </div>
+</header>
+
+<div class="menu-mobile" [ngClass]="menuActive ? 'menuActive--activo' : '' ">
+    <img src="../../assets/images/icon-close.svg" (click)="menuActive = !menuActive" alt="icon close">
+    <ul class="menu-mobile__ul">
+        <li class="menu-mobile__li">Collections</li>
+        <li class="menu-mobile__li">Men</li>
+        <li class="menu-mobile__li">Women</li>
+        <li class="menu-mobile__li">About</li>
+        <li class="menu-mobile__li">Contact</li>
+    </ul>
+</div>
+<div class="" [ngClass]="menuActive ? 'backdrop' : '' " ></div>
