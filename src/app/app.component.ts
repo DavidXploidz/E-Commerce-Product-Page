@@ -20,29 +20,29 @@ export class AppComponent {
   carrusel = [    
     {
       id:1,
-      ruta: "../assets/images/image-product-1-thumbnail.jpg",
+      ruta: "src/../assets/images/image-product-1-thumbnail.jpg",
       rutaBig: "../assets/images/image-product-1.jpg",
       nombre: "Producto1",
       estado: true
     },
     {
       id:2,
-      ruta: "../assets/images/image-product-2-thumbnail.jpg",
-      rutaBig: "../assets/images/image-product-2.jpg",
+      ruta: "src/../assets/images/image-product-2-thumbnail.jpg",
+      rutaBig: "src/../assets/images/image-product-2.jpg",
       nombre: "Producto2",
       estado: false
     },
     {
       id:3,
-      ruta: "../assets/images/image-product-3-thumbnail.jpg",
-      rutaBig: "../assets/images/image-product-3.jpg",
+      ruta: "src/../assets/images/image-product-3-thumbnail.jpg",
+      rutaBig: "src/../assets/images/image-product-3.jpg",
       nombre: "Producto3",
       estado: false
     },
     {
       id:4,
-      ruta: "../assets/images/image-product-4-thumbnail.jpg",
-      rutaBig: "../assets/images/image-product-4.jpg",
+      ruta: "src/../assets/images/image-product-4-thumbnail.jpg",
+      rutaBig: "src/../assets/images/image-product-4.jpg",
       nombre: "Producto4",
       estado: false
     }
